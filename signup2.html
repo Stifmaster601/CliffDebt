@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+#heading{border: 2px dotted white;
+background:orange;}
+body{background:#f64522;}
+
+#ae{text-decoration:underline;
+color:white;}
+
+h4{border: 1px solid white;
+background:transparent;
+background:Orange ;
+opacity:0.5;}
+h4{
+color:black;}
+
+a{text-decoration:none;}
+
+#login{border: 2px solid black;
+background:orange;}
+
+progress{color:green;}
+</style>
+
+</head>
+
+<body>
+<div id="heading">
+<h1 align="center"> Cliff Debt</h1>
+<p align="center">SOLUTIONS</p>
+
+</div>
+<br>
+
+<h6>2/2<progress min="0" Max="100" value="99"></progress></h6>
+
+<div id="options">
+<h3 id="ae" align="center"> AE DEBT MANAGEMENT </h3>
+
+
+
+<form>
+<h5><input type="radio" name="gender" value="female"/>Female</h5>
+<h5><input type="radio" name="gender" value="male"/>Male</h5><br>
+
+<form id="myform">
+<h4><input type="tel" id="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>Phone number </form>
+<br>
+
+<h4><input type="text" id="address" name="address" required>address</h4>
+
+
+<h4><input type="text" id="postcode" name="postcode" pattern="[0-9]{5}" required>post code</h4>
+
+
+<h4><input type="password" id="password" pattern="^(?=.[a-z])(?=.[A-Z])(?=.\d).{8,}$" required>Password</h4>
+
+
+<h4><input type="password" id="confirmpassword" name="confirmpassword" required> confirm Password</h4>
+
+</form>
+</div>
+
+<br>
+<hr>
+
+<div id="login"><a href="Home.html"> <h3 align="center">NEXT</h3></a>
+
+
+</div>
+
+
+<script>
+
+const form =
+document.getElementById('myForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  // Phone number validation
+  var phone = document.getElementById('phone').value;
+  if (!phone.match(/[0-9]{3}-[0-9]{3}-[0-9]{4}/)) {
+    alert('Invalid phone number');
+    return;
+  }
+
+  // Address validation
+  var address = document.getElementById('address').value;
+  if (address.trim() === '') {
+    alert('Address is required');
+    return;
+  }
+
+  // Post office validation
+  var postcode = document.getElementById('postcode').value;
+  if (!postcode.match(/[0-9]{5}/)) {
+    alert('Invalid post office code');
+    return;
+  }
+
+  // Password validation
+  var password = document.getElementById('password').value;
+  var confirmPassword = document.getElementById('confirmPassword').value;
+  if (password !== confirmPassword) {
+    alert('Passwords do not match');
+    return;
+  }
+
+  // Submit form if all validations pass
+  this.submit();
+});
+```
+
+
+
+</script>
+
+
+
+
+<footer>
+
+<ol>
+
+
+
+</footer>
+</body>
+</html>
